@@ -1,9 +1,96 @@
-$mainColor: #dd3333;
+* {margin: 0; padding: 0;}
+html { font-size: 62.5%; font-family: 'Microsoft Yahei'; } 
+img {display: block;}
+ul, li{list-style: none; }
 
-.page{
+$mainColor: #dd3333;
+$lightColor: #ffffff;
+$borderColor: #dddddd;
+$mainFontColor: #777;
+
+.page {
 	width: 100%;
 	height: 100%;
-	.container{
+	.container {
 		width: 100%;
+        height: 100vh;
 	}
 }
+
+.goods{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: 'space-between';
+    h2, h3{
+        font-weight: 500;
+    }
+    .header {
+        width: 100%;
+        height: 4rem;
+        background-color: $mainColor;
+        line-height: 4rem;
+        color: $lightColor;
+        text-align: center;
+        h2 {
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+    }
+
+    .main{
+        flex: 1;
+    }
+
+    .basic {
+        border-bottom: 1px solid $borderColor;
+        padding: 1rem;
+        img{width: 100%; margin-bottom: 1rem;}
+        
+        h3 {
+            font-size: 1.5rem;
+            span {color: $mainColor;}
+        }
+        p {color: $mainFontColor; }
+        .counter{
+            display: flex; margin: .5rem 0;
+            button{display: block; width: 2.5rem; height:2.5rem; line-height: 2rem; box-sizing: border-box; font-size: 2rem; }
+            input[type=number]{margin: 0; padding: 0; border: none; border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; box-sizing: border-box; width: 3rem; height: 2.5rem; line-height: 2.5rem; text-align: center;}
+        }
+    }
+
+    .detail {
+        padding: 1rem;
+        ul {
+            li {}
+        }
+    }
+
+    .buy{
+        width: 100%;
+        height: 4rem;
+        line-height: 4rem;
+        display: flex;
+        flex-direction: row;
+        p {
+            display: block;
+            flex: 1;
+            text-align: center;
+            border-top: 1px solid $borderColor;
+            font-size: 1.6rem;
+            color: $mainColor;
+        }
+        button {
+            display: block;
+            width: 12rem;
+            font-size: 1.5rem;
+            background-color: $mainColor;
+            border: none;
+            color: $lightColor;
+            text-align: center;
+        }
+    }
+}
+
+

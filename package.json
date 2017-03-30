@@ -12,7 +12,10 @@
   "dependencies": {
     "angular": "^1.6.3",
     "angular-resource": "^1.6.3",
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "^0.4.2",
+    "ng-redux": "^3.4.0-beta.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

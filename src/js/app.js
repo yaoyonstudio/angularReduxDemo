@@ -2,13 +2,16 @@ import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import ngResource from 'angular-resource'
 
+import ngRedux from 'ng-redux'
+import { RootReducer } from './reducers'
+
 import routing from './router.config.js'
 import appconfig from './app.config.js'
 import ControllerModule from './controller'
 import ComponentModule from './component'
 import ServiceModule from './service'
 
-angular.module('myApp', [uiRouter, ngResource, ControllerModule, ComponentModule, ServiceModule])
+angular.module('myApp', [uiRouter, ngRedux, ngResource, ControllerModule, ComponentModule, ServiceModule])
 .constant('CONFIG', {
   'API_URL': 'http://localhost:3000',
   'EXTEND_URL': 'http://water.tigonetwork.com'
@@ -32,3 +35,7 @@ angular.module('myApp', [uiRouter, ngResource, ControllerModule, ComponentModule
     }
   }])
 }])
+.config(($ngReduxProvider) => {
+  'ngInject'
+  $ngReduxProvider.createStoreWith(RootReducer)
+})

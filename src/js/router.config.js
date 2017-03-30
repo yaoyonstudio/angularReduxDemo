@@ -9,6 +9,12 @@ export default function routing ($stateProvider, $urlRouterProvider, $urlMatcher
       controller: 'HomeCtrl',
       controllerAs: 'hc'
     })
+    .state('goods', {
+      url: '/goods',
+      templateUrl: 'templates/goods.html',
+      controller: 'GoodsCtrl',
+      controllerAs: 'gc'
+    })
 
     .state('test', {
       url: '/test',
